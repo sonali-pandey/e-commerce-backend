@@ -3,6 +3,7 @@ const { Tag, Product, ProductTag } = require('../../models');
 
 // The `/api/tags` endpoint
 
+// GET API - Get all tags
 router.get('/', (req, res) => {
   // find all tags including the associated Products
   Tag.findAll({
@@ -21,6 +22,7 @@ router.get('/', (req, res) => {
   });
 });
 
+// GET BY ID API - get tags by id provided by user
 router.get('/:id', (req, res) => {
   // find a single tag by its `id` including associted Product
   Tag.findOne({
@@ -42,8 +44,15 @@ router.get('/:id', (req, res) => {
   });
 });
 
+// POST API - Add a new tag
 router.post('/', (req, res) => {
   // create a new tag
+  Tag.create(req.body)
+  .then(dbData => res.json(dbData))
+  .catch(err => {
+    console.log(err)
+    res.status(400).json(err)
+  });
 });
 
 router.put('/:id', (req, res) => {
