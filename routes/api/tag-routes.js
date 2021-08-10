@@ -17,8 +17,8 @@ router.get('/', (req, res) => {
   })
   .then(dbData => res.json(dbData))
   .catch(err => {
-    console.log(err)
-    res.status(500).json(err)
+    console.log(err);
+    res.status(500).json(err);
   });
 });
 
@@ -39,7 +39,7 @@ router.get('/:id', (req, res) => {
   })
   .then(dbData => res.json(dbData))
   .catch(err => {
-    console.log(err)
+    console.log(err);
     res.status(404).json({message: 'No tag was found with this id'});
   });
 });
@@ -50,8 +50,8 @@ router.post('/', (req, res) => {
   Tag.create(req.body)
   .then(dbData => res.json(dbData))
   .catch(err => {
-    console.log(err)
-    res.status(400).json(err)
+    console.log(err);
+    res.status(400).json(err);
   });
 });
 
@@ -65,17 +65,18 @@ router.put('/:id', (req, res) => {
   })
   .then(dbData => {
     if (!dbData) {
-      res.status(404).json({message: 'No tag found for this id!'})
+      res.status(404).json({message: 'No tag found for this id!'});
       return;
     }
-    res.json(dbData)
+    res.json(dbData);
   })
   .catch(err => {
-    console.log(err)
-    res.status(500).json(err)
+    console.log(err);
+    res.status(500).json(err);
   })
 });
 
+// DELETE API - delete a tag
 router.delete('/:id', (req, res) => {
   // delete on tag by its `id` value
   Tag.destroy({
@@ -85,14 +86,14 @@ router.delete('/:id', (req, res) => {
   })
   .then(dbTagData => {
     if (!dbTagData) {
-      res.status(404).json({message: 'No tag found for this id!'})
+      res.status(404).json({message: 'No tag found for this id!'});
       return;
     }
-    res.json(dbTagData)
+    res.json(dbTagData);
   })
   .catch(err => {
-    console.log(err)
-    res.status(500).json(err)
+    console.log(err);
+    res.status(500).json(err);
   })
 });
 

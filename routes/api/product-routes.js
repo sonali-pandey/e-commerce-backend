@@ -48,13 +48,13 @@ router.get('/:id', (req, res) => {
   })
   .then(dbData => {
     if (!dbData) {
-      res.status(404).json({message: 'No product found for this id!'})
+      res.status(404).json({message: 'No product found for this id!'});
       return;
     }
-    res.json(dbData)
+    res.json(dbData);
   })
   .catch(err => {
-    console.log(err)
+    console.log(err);
     res.status(500).json(err);
   });
 });
@@ -134,6 +134,7 @@ router.put('/:id', (req, res) => {
     });
 });
 
+// DELETE API - delete a product
 router.delete('/:id', (req, res) => {
   // delete one product by its `id` value
   Product.destroy({
@@ -143,14 +144,14 @@ router.delete('/:id', (req, res) => {
   })
   .then(dbProductData => {
     if (!dbProductData) {
-      res.status(404).json({message: 'No product found for this id!'})
+      res.status(404).json({message: 'No product found for this id!'});
       return;
     }
-    res.json(dbProductData)
+    res.json(dbProductData);
   })
   .catch(err => {
-    console.log(err)
-    res.status(500).json(err)
+    console.log(err);
+    res.status(500).json(err);
   })
 });
 
