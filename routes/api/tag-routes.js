@@ -55,8 +55,25 @@ router.post('/', (req, res) => {
   });
 });
 
+// PUT API - update a tag
 router.put('/:id', (req, res) => {
   // update a tag's name by its `id` value
+  Tag.update(req.body, {
+    where: {
+      id: req.params.id,
+    }
+  })
+  .then(dbData => {
+    if (!dbData) {
+      res.status(404).json({message: 'No tag found for this id!'})
+      return;
+    }
+    res.json(dbData)
+  })
+  .catch(err => {
+    console.log(err)
+    res.status(500).json(err)
+  })
 });
 
 router.delete('/:id', (req, res) => {
