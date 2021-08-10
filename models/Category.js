@@ -22,7 +22,7 @@ Category.init(
     category_name: {
       type: DataTypes.STRING,
       allowNull: false,
-      // there cannot be any duplicate email values in this table
+      // there cannot be any duplicate category names in this table
       unique: true,
     }
   },
