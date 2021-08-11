@@ -20,6 +20,11 @@ This is a backend code for E-commerce site.
 * Install [Node.js](https://nodejs.dev/)
 * Clone the [Repo](https://github.com/sonali-pandey/e-commerce-backend)
 * Run `npm install` on the command prompt to install all the dependencies
+* Create a .env file in root directory and add your MySQL credentials
+
+       DB_NAME='ecommerce_db' 
+       DB_USER='mysql_username'
+       DB_PW='mysql_password'
 
 ## Usage
 
@@ -91,8 +96,41 @@ Testing not available
 
 ## Demo
 
-### Video
-Click [HERE]() to watch the demo video.
+### Create Database, Seed Data, and Start Server
+
+![](./assets/demo/create-seed-start.gif)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### GET API - View All
+
+![View All](./assets/demo/GET-API-View-all.gif)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### GET API - View By Id
+
+![View By ID](./assets/demo/GET-API-View-By-ID.gif)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### POST API - Add Data
+
+![Add Data](./assets/demo/POST-API-Add-Data.gif)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### PUT API - Update Data
+
+![Update Data](./assets/demo/PUT-API-Update-Data.gif)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+### DELETE API - Delete Data
+
+![Delete Data](./assets/demo/DELETE-API-Delete-Data.gif)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Thank You
 ### Author Details
