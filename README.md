@@ -83,8 +83,6 @@ This is a backend code for E-commerce site.
       2. /api/products/id:<product_id> : Delete the Product with the provided id
       3. /api/tags/id:<tag_id> : Delete the tag with the provided id
 
-     >NOTE: You need to provide the detail to be deleted in JSON format
-
 ## Tests
 Testing not available
 
