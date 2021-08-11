@@ -20,6 +20,11 @@ This is a backend code for E-commerce site.
 * Install [Node.js](https://nodejs.dev/)
 * Clone the [Repo](https://github.com/sonali-pandey/e-commerce-backend)
 * Run `npm install` on the command prompt to install all the dependencies
+* Create a .env file in root directory and add your MySQL credentials
+
+       DB_NAME='ecommerce_db' 
+       DB_USER='mysql_username'
+       DB_PW='mysql_password'
 
 ## Usage
 
@@ -90,6 +95,12 @@ Testing not available
 - [Sequelize ORM](https://sequelize.org/)
 
 ## Demo
+
+### Create Database, Seed Data, and Start Server
+
+![](./assets/demo/create-seed-start.gif)
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ### GET API - View All
 
